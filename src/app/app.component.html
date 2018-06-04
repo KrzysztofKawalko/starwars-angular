@@ -1,5 +1,5 @@
 <!-- nawigacja -->
-<nav class="navbar navbar-default fixed-top navbar-moj">
+<nav class="navbar navbar-default navbar-fixed-top navbar-moj">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<!-- hamburger -->
@@ -15,7 +15,7 @@
 		</div>
 		<!-- menu -->
 		<div class="collapse navbar-collapse" [collapse]=isCollapsed>
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
 				<li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Strona główna</li>
 				<li routerLink="/wiecej" routerLinkActive="active">Więcej o GW</li>
 				<li routerLink="/galeria" routerLinkActive="active">Galeria</li>
@@ -25,5 +25,7 @@
 		</div>
 	</div>
 </nav>
+<div style="height: 50px; width: 100%;"></div>
 <router-outlet></router-outlet>
 <footer></footer>
+<button class="top-button" *ngIf="isShow" (click)="gotoTop()"><i class="fa fa-angle-double-up"></i></button>
