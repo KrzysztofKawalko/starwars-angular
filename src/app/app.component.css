@@ -1,0 +1,38 @@
+p {
+  font-family: Lato;
+}
+
+.navbar-moj {
+    background: #000;
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+    font-family: 'Lato', 'Open Sans', sans-serif;
+}
+
+li {
+  cursor: pointer;
+  color: rgba(255,255,255,.5);
+  font-size: 1.2em;
+  line-height: 2.8em;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: none;
+}
+
+li:hover {
+  color: rgba(255,255,255,.7);
+}
+
+.navbar-brand {
+  padding-top: 0;
+}
+
+.active {
+  color: white;
+}
+
+div.collapse.navbar-collapse.in.show {
+  padding-left: 30px;
+  border-color: #000000;
+}

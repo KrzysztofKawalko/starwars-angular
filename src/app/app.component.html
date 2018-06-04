@@ -1,0 +1,29 @@
+<!-- nawigacja -->
+<nav class="navbar navbar-default fixed-top navbar-moj">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<!-- hamburger -->
+			<button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+			<span class="navbar-brand">
+        <a routerLink="/" routerLinkActive="active"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Star_Wars_Logo_2.svg" height="50" class="d-inline-block align-top" alt=""></a>
+        </span>
+		</div>
+		<!-- menu -->
+		<div class="collapse navbar-collapse" [collapse]=isCollapsed>
+			<ul class="nav navbar-nav">
+				<li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Strona główna</li>
+				<li routerLink="/wiecej" routerLinkActive="active">Więcej o GW</li>
+				<li routerLink="/galeria" routerLinkActive="active">Galeria</li>
+        <li routerLink="/trailers" routerLinkActive="active">Video</li>
+				<li routerLink="/kontakt" routerLinkActive="active">Kontakt</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<router-outlet></router-outlet>
+<footer></footer>

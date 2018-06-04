@@ -1,0 +1,14 @@
+accordion-group img {
+    width: 50%;
+    padding-bottom: 1em;
+}
+
+p {
+  text-align: right;
+}
+
+a {
+  font-weight: bold;
+  font-family: 'Open Sans';
+  color: black;
+}

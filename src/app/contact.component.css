@@ -1,0 +1,28 @@
+h2 {
+  padding-top: 1em;
+}
+
+#formularz div {
+	margin-top: 1em;		
+}
+ 
+.message-sent {
+  color: green;
+  font-size: 2em;
+}
+
+button {
+  width: 100px;
+}
+
+.sw-form {
+  padding-bottom: 2em;
+}
+
+agm-map {
+  height: 300px;
+}
+
+.sw-adress {
+  padding-top: 2em;
+}

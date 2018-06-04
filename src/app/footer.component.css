@@ -1,0 +1,44 @@
+.sw-footer {
+  background-color: #212121;
+  font-family: 'Lato', 'Open Sans', sans-serif;
+  padding-bottom: 3em;
+}
+
+.footer-container p {
+  color: rgba(255,255,255,.7);
+  font-size: 1em;
+  padding-top: 1em;
+}
+
+.sw-footer-hr {
+  margin: 0;
+}
+
+.active {
+  color: white !important;
+  text-decoration: underline;
+  }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: .5em 0 1em 0;
+  }
+
+ul li {
+  display: inline-block;
+  margin-right: 1em;
+  text-align: center;
+  color: rgba(255,255,255,.7);
+  outline: none;
+  font-size: .9em;
+  }
+
+ul li:hover {
+  cursor: pointer;
+  color: rgba(255,255,255,.9);
+  }
+
+hr {
+  border-top-color: rgba(255,255,255,.5);
+}

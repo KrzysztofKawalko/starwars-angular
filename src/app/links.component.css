@@ -1,0 +1,13 @@
+div {
+    text-align: left;
+    margin-top: 2em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+p.useful-links {
+  font-size: 1em;
+  line-height: 1.5em;
+}

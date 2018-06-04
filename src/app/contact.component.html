@@ -1,0 +1,92 @@
+<div class="bg-fix sw-form">
+	<div class="container">
+		<div class="row">
+			<!-- main section -->
+			<section class="col-sm-8">
+
+        <!-- Google Maps -->
+        <h1>{{ title }}</h1>
+
+        <!-- this creates a google map on the page with the given lat/lng from -->
+        <!-- the component as the initial center of the map: -->
+        <agm-map 
+          [latitude]="lat"
+          [longitude]="lng"
+          [zoom]="zoom"
+          [disableDefaultUI]="false"
+          [zoomControl]="false"
+          >
+
+          <agm-marker 
+              *ngFor="let m of markers; let i = index"
+             
+              [latitude]="m.lat"
+              [longitude]="m.lng"
+              [label]="m.label"
+              [markerDraggable]="m.draggable"
+             >
+              
+            <agm-info-window>
+              <strong>Klub StarWars</strong><br />
+              Fabryczna 29/31<br />
+              53-609 Wrocław
+            </agm-info-window>
+            
+          </agm-marker>
+
+        </agm-map>
+
+				<h2>Formularz kontaktowy</h2>
+				<h4 class="sw-subtitle">Napisz do nas</h4>
+				<!-- form -->
+
+				<div class="message-sent" *ngIf="!submitted && loggedIn">
+					Twoja wiadomość została wysłana. Dziękujemy!
+				</div>
+
+        <form *ngIf="!loggedIn" (ngSubmit)="onSubmit($event)" style="width: 70%">
+          <div class="form-group">
+            <label for="name">Imię:</label>
+            <input type="text" class="form-control" placeholder="Imię">
+          </div>
+          <div class="form-group">
+            <label for="message">Wiadomość*:</label>
+            <textarea class="form-control" placeholder="Wiadomość" rows="4"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="email">Email*:</label>
+            <input  type="email" class="form-control" #input 
+                 [formControl]="emailFormControl"
+                 [(ngModel)]="value"
+                 placeholder="Email">
+                 <span *ngIf="emailFormControl.hasError('required')">Adres email jest wymagany!</span>
+                 <span *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                   Wpisz prawidłowy adres mailowy.</span>
+          </div>
+          <div class="form-group">
+                  <input type="checkbox" id="check">
+                  <label for="check"> &nbsp; Chcę otrzymywać newsletter</label>
+              </div>
+          <div>
+          <button class="btn btn-primary btn-md" type="submit"
+                  [disabled]="buttonDisabled"
+                  color="primary">
+            {{buttonText}}
+          </button>
+        </div>
+        </form>
+			</section>
+			<!-- side section -->
+			<section class="col-sm-4">
+				<div class="sw-adress">
+          <h4>Adres</h4>
+          <p>Klub Star Wars<br />
+          Fabryczna 29/31<br />
+          53-609 Wrocław
+          </p>
+        </div>
+        <linki></linki>
+			</section>
+		</div>
+	</div>
+</div>
